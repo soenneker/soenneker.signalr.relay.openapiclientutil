@@ -1,21 +1,21 @@
-using Soenneker.Cloudflare.SignalR.OpenApiClient;
+using Soenneker.SignalR.Relay.OpenApiClient;
 using System;
 using System.Text.Json;
-using Soenneker.Cloudflare.SignalR.OpenApiClient.Models;
+using Soenneker.SignalR.Relay.OpenApiClient.Models;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Soenneker.Cloudflare.SignalR.OpenApiClientUtil.Abstract;
+namespace Soenneker.SignalR.Relay.OpenApiClientUtil.Abstract;
 
 /// <summary>
 /// Exposes a cached OpenAPI client instance.
 /// </summary>
-public interface ICloudflareSignalROpenApiClientUtil: IDisposable, IAsyncDisposable
+public interface ISignalRRelayOpenApiClientUtil: IDisposable, IAsyncDisposable
 {
     /// <summary>Gets the generated relay management client.</summary>
     /// <param name="cancellationToken">Cancels initialization.</param>
     /// <returns>The shared client.</returns>
-    ValueTask<CloudflareSignalROpenApiClient> Get(CancellationToken cancellationToken = default);
+    ValueTask<SignalRRelayOpenApiClient> Get(CancellationToken cancellationToken = default);
 
     /// <summary>Invokes a client method and decodes its framed SignalR completion.</summary>
     /// <param name="hub">Hub name.</param>

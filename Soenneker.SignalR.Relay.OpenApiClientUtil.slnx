@@ -8,9 +8,9 @@
     <File Path=".github/workflows/publish-package.yml" />
   </Folder>
   <Folder Name="/src/">
-    <Project Path="src/Soenneker.Cloudflare.SignalR.OpenApiClientUtil/Soenneker.Cloudflare.SignalR.OpenApiClientUtil.csproj" />
+    <Project Path="src/Soenneker.SignalR.Relay.OpenApiClientUtil/Soenneker.SignalR.Relay.OpenApiClientUtil.csproj" />
   </Folder>
   <Folder Name="/test/">
-    <Project Path="test/Soenneker.Cloudflare.SignalR.OpenApiClientUtil.Tests/Soenneker.Cloudflare.SignalR.OpenApiClientUtil.Tests.csproj" />
+    <Project Path="test/Soenneker.SignalR.Relay.OpenApiClientUtil.Tests/Soenneker.SignalR.Relay.OpenApiClientUtil.Tests.csproj" />
   </Folder>
 </Solution>

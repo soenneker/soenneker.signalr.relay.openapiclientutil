@@ -1,19 +1,19 @@
-[![](https://img.shields.io/nuget/v/soenneker.cloudflare.signalr.openapiclientutil.svg?style=for-the-badge)](https://www.nuget.org/packages/soenneker.cloudflare.signalr.openapiclientutil/)
-[![](https://img.shields.io/github/actions/workflow/status/soenneker/soenneker.cloudflare.signalr.openapiclientutil/publish-package.yml?style=for-the-badge)](https://github.com/soenneker/soenneker.cloudflare.signalr.openapiclientutil/actions/workflows/publish-package.yml)
-[![](https://img.shields.io/nuget/dt/soenneker.cloudflare.signalr.openapiclientutil.svg?style=for-the-badge)](https://www.nuget.org/packages/soenneker.cloudflare.signalr.openapiclientutil/)
+[![](https://img.shields.io/nuget/v/soenneker.signalr.relay.openapiclientutil.svg?style=for-the-badge)](https://www.nuget.org/packages/soenneker.signalr.relay.openapiclientutil/)
+[![](https://img.shields.io/github/actions/workflow/status/soenneker/soenneker.signalr.relay.openapiclientutil/publish-package.yml?style=for-the-badge)](https://github.com/soenneker/soenneker.signalr.relay.openapiclientutil/actions/workflows/publish-package.yml)
+[![](https://img.shields.io/nuget/dt/soenneker.signalr.relay.openapiclientutil.svg?style=for-the-badge)](https://www.nuget.org/packages/soenneker.signalr.relay.openapiclientutil/)
 
-# ![](https://user-images.githubusercontent.com/4441470/224455560-91ed3ee7-f510-4041-a8d2-3fc093025112.png) Soenneker.Cloudflare.SignalR.OpenApiClientUtil
+# ![](https://user-images.githubusercontent.com/4441470/224455560-91ed3ee7-f510-4041-a8d2-3fc093025112.png) Soenneker.SignalR.Relay.OpenApiClientUtil
 ### A thread-safe utility for obtaining SignalR's OpenApiClient singleton.
 
 ## Installation
 
 ```
-dotnet add package Soenneker.Cloudflare.SignalR.OpenApiClientUtil
+dotnet add package Soenneker.SignalR.Relay.OpenApiClientUtil
 ```
 
 ## Usage
 
-Configure `Relay:Endpoint` with the relay origin and `Relay:AccessKey` with its current signing key. Register `AddCloudflareSignalROpenApiClientUtilAsSingleton()` and inject `ICloudflareSignalROpenApiClientUtil`.
+Configure `Relay:Endpoint` with the relay origin and `Relay:AccessKey` with its current signing key. Register `AddSignalRRelayOpenApiClientUtilAsSingleton()` and inject `ISignalRRelayOpenApiClientUtil`.
 
 ```csharp
 var client = await relay.Get(cancellationToken);

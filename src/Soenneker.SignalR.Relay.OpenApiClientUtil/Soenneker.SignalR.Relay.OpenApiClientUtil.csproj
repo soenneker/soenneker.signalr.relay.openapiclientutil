@@ -13,8 +13,8 @@
         <Description>A thread-safe utility for obtaining SignalR's OpenApiClient singleton.</Description>
         <Version Condition="'$(BUILD_VERSION)' == ''">11.0.0</Version>
         <Version Condition="'$(BUILD_VERSION)' != ''">$(BUILD_VERSION)</Version>
-        <AssemblyName>Soenneker.Cloudflare.SignalR.OpenApiClientUtil</AssemblyName>
-        <PackageId>Soenneker.Cloudflare.SignalR.OpenApiClientUtil</PackageId>
+        <AssemblyName>Soenneker.SignalR.Relay.OpenApiClientUtil</AssemblyName>
+        <PackageId>Soenneker.SignalR.Relay.OpenApiClientUtil</PackageId>
         <PackageTags>cloudflare signalr openapiclientutil relay management openapi kiota client util singleton cloudflaresignalropenapiclientutil csharp dotnet c# .net</PackageTags>
         <Copyright>Copyright Â© 2026 Jake Soenneker</Copyright>
         <Authors>Jake Soenneker</Authors>
@@ -25,8 +25,8 @@
         <SymbolPackageFormat>snupkg</SymbolPackageFormat>
         <IsPackable>true</IsPackable>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
-        <PackageProjectUrl>https://github.com/soenneker/soenneker.cloudflare.signalr.openapiclientutil</PackageProjectUrl>
-        <RepositoryUrl>https://github.com/soenneker/soenneker.cloudflare.signalr.openapiclientutil</RepositoryUrl>
+        <PackageProjectUrl>https://github.com/soenneker/soenneker.signalr.relay.openapiclientutil</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/soenneker/soenneker.signalr.relay.openapiclientutil</RepositoryUrl>
         <RepositoryType>git</RepositoryType>
         <RepositoryBranch>main</RepositoryBranch>
         <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
@@ -45,8 +45,8 @@
     </ItemGroup>
 
     <ItemGroup>
-        <PackageReference Include="Soenneker.Cloudflare.SignalR.HttpClients" Version="11.0.1" />
-        <PackageReference Include="Soenneker.Cloudflare.SignalR.OpenApiClient" Version="11.0.1" />
+        <PackageReference Include="Soenneker.SignalR.Relay.HttpClients" Version="11.0.1" />
+        <PackageReference Include="Soenneker.SignalR.Relay.OpenApiClient" Version="11.0.1" />
         <PackageReference Include="Soenneker.Utils.AsyncSingleton" Version="11.0.896" />
     </ItemGroup>
 </Project>

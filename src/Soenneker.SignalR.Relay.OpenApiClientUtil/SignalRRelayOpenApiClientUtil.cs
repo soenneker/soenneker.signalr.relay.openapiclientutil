@@ -4,25 +4,25 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.IO;
 using System.Text.Json;
-using Soenneker.Cloudflare.SignalR.OpenApiClient.Models;
+using Soenneker.SignalR.Relay.OpenApiClient.Models;
 using Microsoft.Kiota.Abstractions.Authentication;
 using Microsoft.Kiota.Http.HttpClientLibrary;
 using Soenneker.Extensions.ValueTask;
-using Soenneker.Cloudflare.SignalR.HttpClients.Abstract;
-using Soenneker.Cloudflare.SignalR.OpenApiClientUtil.Abstract;
-using Soenneker.Cloudflare.SignalR.OpenApiClient;
+using Soenneker.SignalR.Relay.HttpClients.Abstract;
+using Soenneker.SignalR.Relay.OpenApiClientUtil.Abstract;
+using Soenneker.SignalR.Relay.OpenApiClient;
 using Soenneker.Utils.AsyncSingleton;
 
-namespace Soenneker.Cloudflare.SignalR.OpenApiClientUtil;
+namespace Soenneker.SignalR.Relay.OpenApiClientUtil;
 
 /// <summary>Provides a shared Kiota client for relay management.</summary>
-public sealed class CloudflareSignalROpenApiClientUtil : ICloudflareSignalROpenApiClientUtil
+public sealed class SignalRRelayOpenApiClientUtil : ISignalRRelayOpenApiClientUtil
 {
-    private readonly AsyncSingleton<CloudflareSignalROpenApiClient> _client;
+    private readonly AsyncSingleton<SignalRRelayOpenApiClient> _client;
 
-    public CloudflareSignalROpenApiClientUtil(ICloudflareSignalROpenApiHttpClient httpClientUtil)
+    public SignalRRelayOpenApiClientUtil(ISignalRRelayOpenApiHttpClient httpClientUtil)
     {
-        _client = new AsyncSingleton<CloudflareSignalROpenApiClient>(async token =>
+        _client = new AsyncSingleton<SignalRRelayOpenApiClient>(async token =>
         {
             HttpClient httpClient = await httpClientUtil.Get(token).NoSync();
 
@@ -31,11 +31,11 @@ public sealed class CloudflareSignalROpenApiClientUtil : ICloudflareSignalROpenA
                 BaseUrl = httpClient.BaseAddress!.GetLeftPart(UriPartial.Authority)
             };
 
-            return new CloudflareSignalROpenApiClient(requestAdapter);
+            return new SignalRRelayOpenApiClient(requestAdapter);
         });
     }
 
-    public ValueTask<CloudflareSignalROpenApiClient> Get(CancellationToken cancellationToken = default)
+    public ValueTask<SignalRRelayOpenApiClient> Get(CancellationToken cancellationToken = default)
     {
         return _client.Get(cancellationToken);
     }

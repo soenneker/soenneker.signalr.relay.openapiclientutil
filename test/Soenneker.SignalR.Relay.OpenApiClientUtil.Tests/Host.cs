@@ -4,9 +4,9 @@ using Microsoft.Extensions.DependencyInjection;
 using Serilog;
 using Soenneker.TestHosts.Unit;
 using Soenneker.Utils.Test;
-using Soenneker.Cloudflare.SignalR.OpenApiClientUtil.Registrars;
+using Soenneker.SignalR.Relay.OpenApiClientUtil.Registrars;
 
-namespace Soenneker.Cloudflare.SignalR.OpenApiClientUtil.Tests;
+namespace Soenneker.SignalR.Relay.OpenApiClientUtil.Tests;
 
 public sealed class Host : UnitTestHost
 {
@@ -30,6 +30,6 @@ public sealed class Host : UnitTestHost
         }).Build();
         services.AddSingleton(config);
 
-        services.AddCloudflareSignalROpenApiClientUtilAsScoped();
+        services.AddSignalRRelayOpenApiClientUtilAsScoped();
     }
 }
