@@ -15,7 +15,7 @@
         <Version Condition="'$(BUILD_VERSION)' != ''">$(BUILD_VERSION)</Version>
         <AssemblyName>Soenneker.SignalR.Relay.OpenApiClientUtil</AssemblyName>
         <PackageId>Soenneker.SignalR.Relay.OpenApiClientUtil</PackageId>
-        <PackageTags>cloudflare signalr openapiclientutil relay management openapi kiota client util singleton cloudflaresignalropenapiclientutil csharp dotnet c# .net</PackageTags>
+        <PackageTags>signalr openapiclientutil relay management openapi kiota client util singleton signalrrelayopenapiclientutil csharp dotnet c# .net</PackageTags>
         <Copyright>Copyright Â© 2026 Jake Soenneker</Copyright>
         <Authors>Jake Soenneker</Authors>
         <Company>https://soenneker.com</Company>
